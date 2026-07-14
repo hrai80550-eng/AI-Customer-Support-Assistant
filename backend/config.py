@@ -1,7 +1,10 @@
-class Config:
-    SECRET_KEY = "customer_support_chatbot_secret_key"
+import os
+from pathlib import Path
 
-    MYSQL_HOST = "localhost"
-    MYSQL_USER = "root"
-    MYSQL_PASSWORD = "root"
-    MYSQL_DATABASE = "customer_support_chatbot"
+
+class Config:
+    SECRET_KEY = os.environ.get("SECRET_KEY", "customer_support_chatbot_secret_key")
+    DATABASE_PATH = os.environ.get(
+        "DATABASE_PATH",
+        str(Path(__file__).resolve().parent.parent / "database" / "customer_support_chatbot.db"),
+    )

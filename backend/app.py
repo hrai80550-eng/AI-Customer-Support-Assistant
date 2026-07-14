@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from database import get_db_connection
+import os
 import requests
 
 app = Flask(
@@ -28,31 +29,38 @@ def chat():
     cursor.execute("""
     INSERT INTO messages
     (conversation_id, sender, message_text)
-    VALUES (%s,%s,%s)
+    VALUES (?,?,?)
     """, (1, "User", user_message))
 
     conn.commit()
 
-    rasa_response = requests.post(
-        "http://localhost:5005/webhooks/rest/webhook",
-        json={
-            "sender": "user",
-            "message": user_message
-        }
-    )
+    rasa_url = os.environ.get("RASA_URL", "http://localhost:5005").rstrip("/")
 
-    rasa_data = rasa_response.json()
+    try:
+        rasa_response = requests.post(
+            f"{rasa_url}/webhooks/rest/webhook",
+            json={
+                "sender": "user",
+                "message": user_message
+            },
+            timeout=30,
+        )
+        rasa_response.raise_for_status()
+        rasa_data = rasa_response.json()
 
-    if rasa_data:
-        bot_response = rasa_data[0]["text"]
-    else:
-        bot_response = "Sorry, I could not understand your query."
+        if rasa_data and rasa_data[0].get("text"):
+            bot_response = rasa_data[0]["text"]
+        else:
+            bot_response = "Sorry, I could not understand your query."
+    except (requests.RequestException, ValueError):
+        app.logger.exception("Unable to get a response from Rasa")
+        bot_response = "The chatbot service is temporarily unavailable. Please try again."
 
     # Save bot response
     cursor.execute("""
     INSERT INTO messages
     (conversation_id, sender, message_text)
-    VALUES (%s,%s,%s)
+    VALUES (?,?,?)
     """, (1, "Bot", bot_response))
 
     conn.commit()

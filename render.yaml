@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: customer-support-web
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-web.txt
+    startCommand: gunicorn --chdir backend app:app
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.11
+      - key: SECRET_KEY
+        generateValue: true
+      - key: RASA_URL
+        value: https://customer-support-rasa.onrender.com
+
+  - type: web
+    name: customer-support-rasa
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements-rasa.txt
+    startCommand: rasa run --enable-api --cors "*" --port $PORT --model rasa_bot/models/20260714-120917-proper-area.tar.gz --credentials rasa_bot/credentials.yml
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.11
