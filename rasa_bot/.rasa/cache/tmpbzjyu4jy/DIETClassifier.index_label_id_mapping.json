@@ -1,0 +1,10 @@
+{
+  "0": "attendance_query",
+  "1": "benefits_query",
+  "2": "document_request",
+  "3": "goodbye",
+  "4": "greeting",
+  "5": "leave_request",
+  "6": "recruitment_query",
+  "7": "salary_query"
+}

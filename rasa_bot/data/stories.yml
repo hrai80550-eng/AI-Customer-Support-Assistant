@@ -1,0 +1,104 @@
+version: "3.1"
+
+stories:
+
+# -----------------------------
+# Basic Stories
+# -----------------------------
+
+- story: greeting path
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+
+- story: salary path
+  steps:
+  - intent: salary_query
+  - action: utter_salary_query
+
+- story: attendance path
+  steps:
+  - intent: attendance_query
+  - action: utter_attendance_query
+
+- story: goodbye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: thank you path
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+# -----------------------------
+# Leave Workflow
+# -----------------------------
+
+- story: leave workflow
+  steps:
+  - intent: leave_request
+  - action: utter_ask_leave_type
+
+  - intent: provide_leave_type
+  - action: utter_ask_leave_days
+
+  - intent: provide_leave_days
+  - action: utter_ask_leave_date
+
+  - intent: provide_leave_date
+  - action: utter_leave_success
+
+# -----------------------------
+# Document Workflow
+# -----------------------------
+
+- story: document workflow
+  steps:
+  - intent: document_request
+  - action: utter_ask_document_type
+
+  - intent: provide_document_type
+  - action: utter_ask_employee_id
+
+  - intent: provide_employee_id
+  - action: utter_document_success
+
+# -----------------------------
+# Recruitment Workflow
+# -----------------------------
+
+- story: recruitment workflow
+  steps:
+  - intent: recruitment_query
+  - action: utter_ask_job_position
+
+  - intent: provide_job_position
+  - action: utter_ask_email
+
+  - intent: provide_email
+  - action: utter_recruitment_success
+
+# -----------------------------
+# Benefits Workflow
+# -----------------------------
+
+- story: benefits workflow
+  steps:
+  - intent: benefits_query
+  - action: utter_ask_benefit_type
+
+  - intent: benefit_type
+  - action: utter_benefit_information
+
+# -----------------------------
+# Live Agent Workflow
+# -----------------------------
+
+- story: live agent workflow
+  steps:
+  - intent: live_agent_request
+  - action: utter_ask_escalation_reason
+
+  - intent: escalation_reason
+  - action: utter_escalation_success

@@ -1,0 +1,21 @@
+{
+  "0": "attendance_query",
+  "1": "benefit_type",
+  "2": "benefits_query",
+  "3": "document_request",
+  "4": "escalation_reason",
+  "5": "goodbye",
+  "6": "greeting",
+  "7": "leave_request",
+  "8": "live_agent_request",
+  "9": "provide_document_type",
+  "10": "provide_email",
+  "11": "provide_employee_id",
+  "12": "provide_job_position",
+  "13": "provide_leave_date",
+  "14": "provide_leave_days",
+  "15": "provide_leave_type",
+  "16": "recruitment_query",
+  "17": "salary_query",
+  "18": "thank_you"
+}

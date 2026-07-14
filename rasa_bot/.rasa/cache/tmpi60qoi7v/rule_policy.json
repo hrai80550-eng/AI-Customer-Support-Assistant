@@ -1,0 +1,28 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"benefits_query\"}}]": "utter_benefits_query",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"benefits_query\"}}, {\"prev_action\": {\"action_name\": \"utter_benefits_query\"}, \"user\": {\"intent\": \"benefits_query\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"recruitment_query\"}}]": "utter_recruitment_query",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"recruitment_query\"}}, {\"prev_action\": {\"action_name\": \"utter_recruitment_query\"}, \"user\": {\"intent\": \"recruitment_query\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"attendance_query\"}}]": "utter_attendance_query",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"attendance_query\"}}, {\"prev_action\": {\"action_name\": \"utter_attendance_query\"}, \"user\": {\"intent\": \"attendance_query\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greeting\"}}]": "utter_greeting",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greeting\"}}, {\"prev_action\": {\"action_name\": \"utter_greeting\"}, \"user\": {\"intent\": \"greeting\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"salary_query\"}}]": "utter_salary_query",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"salary_query\"}}, {\"prev_action\": {\"action_name\": \"utter_salary_query\"}, \"user\": {\"intent\": \"salary_query\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"document_request\"}}]": "utter_document_request",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"document_request\"}}, {\"prev_action\": {\"action_name\": \"utter_document_request\"}, \"user\": {\"intent\": \"document_request\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent back",
+      "predicting default action with intent session_start",
+      "predicting default action with intent restart"
+    ]
+  }
+}

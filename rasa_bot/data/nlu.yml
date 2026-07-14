@@ -1,0 +1,284 @@
+version: "3.1"
+
+nlu:
+
+- intent: greeting
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good afternoon
+    - good evening
+    - greetings
+    - how are you
+    - hello there
+    - hi chatbot
+    - hey assistant
+    - nice to meet you
+    - what's up
+    - good day
+    - hello bot
+
+- intent: leave_request
+  examples: |
+    - I need leave
+    - I want leave
+    - apply for leave
+    - leave request
+    - how can I apply for leave
+    - leave application
+    - request leave
+    - can I take leave tomorrow
+    - I need a day off
+    - holiday request
+    - leave policy
+    - how many leave days do I have
+    - submit leave request
+    - I want to apply for leave
+    - help me apply for leave
+    - leave approval process
+    - I need time off
+    - leave management
+    - apply leave
+    - request time off
+
+- intent: salary_query
+  examples: |
+    - salary
+    - salary details
+    - salary information
+    - salary status
+    - payroll
+    - payroll information
+    - payment information
+    - payslip
+    - salary slip
+    - monthly salary
+    - when will I receive salary
+    - salary query
+    - compensation details
+    - earnings information
+    - paycheck details
+    - wage details
+    - salary account
+    - salary credit
+    - payment status
+    - salary update
+
+- intent: attendance_query
+  examples: |
+    - attendance
+    - attendance record
+    - attendance details
+    - attendance information
+    - attendance report
+    - attendance history
+    - check attendance
+    - my attendance
+    - show attendance
+    - attendance status
+    - attendance summary
+    - working days record
+    - office attendance
+    - attendance log
+    - attendance sheet
+    - absent record
+    - present days
+    - employee attendance
+    - attendance tracking
+    - attendance query
+
+- intent: recruitment_query
+  examples: |
+    - recruitment
+    - hiring process
+    - job openings
+    - available vacancies
+    - current vacancies
+    - job application status
+    - recruitment status
+    - hiring information
+    - open positions
+    - career opportunities
+    - internship opportunities
+    - recruitment details
+    - apply for a job
+    - company vacancies
+    - recruitment query
+
+- intent: benefits_query
+  examples: |
+    - employee benefits
+    - company benefits
+    - benefit details
+    - benefit information
+    - employee perks
+    - incentives
+    - employee welfare
+    - compensation benefits
+    - benefit package
+    - company perks
+
+- intent: document_request
+  examples: |
+    - I need a document
+    - request document
+    - document request
+    - HR documents
+    - company document
+    - official document
+    - employee document
+    - provide certificate
+    - issue certificate
+    - request letter
+    - company records
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - talk later
+    - thanks bye
+    - have a nice day
+    - catch you later
+    - farewell
+    - thank you goodbye
+    - bye chatbot
+
+- intent: provide_leave_type
+  examples: |
+    - sick leave
+    - annual leave
+    - casual leave
+    - maternity leave
+    - paternity leave
+    - emergency leave
+    - personal leave
+    - medical leave
+    - study leave
+    - unpaid leave
+    - I need sick leave
+    - I want annual leave
+
+- intent: provide_leave_days
+  examples: |
+    - 1 day
+    - 2 days
+    - 3 days
+    - 5 days
+    - 7 days
+    - 10 days
+    - for 1 day
+    - for 2 days
+    - for 3 days
+    - for 5 days
+    - for 7 days
+    - for 10 days
+    - one day
+    - two days
+    - three days
+    - five days
+    - seven days
+    - ten days
+
+- intent: provide_leave_date
+  examples: |
+    - 20 July 2026
+    - tomorrow
+    - next monday
+    - 15 August
+    - 1 September 2026
+    - 5 October 2026
+    - next week
+    - coming monday
+    - 10 January 2027
+    - 25 December
+
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - thank u
+    - thanks a lot
+    - appreciate it
+    - many thanks
+    - thank you so much
+
+- intent: provide_document_type
+  examples: |
+    - experience letter
+    - salary certificate
+    - employment certificate
+    - joining letter
+    - relieving letter
+    - I need an experience letter
+    - I need a salary certificate
+    - give me employment certificate
+    - provide joining letter
+
+- intent: provide_employee_id
+  examples: |
+    - EMP001
+    - EMP100
+    - EMP250
+    - EMP500
+    - employee id EMP001
+    - my employee id is EMP100
+    - EMP123
+
+- intent: provide_job_position
+  examples: |
+    - software engineer
+    - data analyst
+    - HR executive
+    - project manager
+    - business analyst
+    - developer
+    - software developer
+    - java developer
+    - python developer
+    - I am interested in software engineer
+    - I want to apply for data analyst
+
+- intent: provide_email
+  examples: |
+    - abc@gmail.com
+    - test@yahoo.com
+    - employee@email.com
+    - hrcandidate@gmail.com
+    - my email is abc@gmail.com
+
+- intent: benefit_type
+  examples: |
+    - health insurance
+    - leave benefits
+    - performance incentives
+    - bonus policy
+    - retirement benefits
+    - medical benefits
+    - tell me about health insurance
+    - retirement plan
+    - insurance benefits
+
+- intent: live_agent_request
+  examples: |
+    - connect me to a human
+    - connect me to an agent
+    - I need human support
+    - talk to HR
+    - live agent
+    - speak with a representative
+
+- intent: escalation_reason
+  examples: |
+    - payroll issue
+    - salary problem
+    - leave approval issue
+    - attendance problem
+    - HR complaint
+    - recruitment issue
+    - there is a payroll issue
+    - my salary has a problem
+    - attendance is incorrect

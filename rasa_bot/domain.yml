@@ -1,0 +1,122 @@
+version: "3.1"
+
+intents:
+  - greeting
+  - leave_request
+  - salary_query
+  - attendance_query
+  - recruitment_query
+  - benefits_query
+  - document_request
+  - goodbye
+  - thank_you
+
+  - provide_leave_type
+  - provide_leave_days
+  - provide_leave_date
+
+  - provide_document_type
+  - provide_employee_id
+
+  - provide_job_position
+  - provide_email
+
+  - benefit_type
+
+  - live_agent_request
+  - escalation_reason
+
+responses:
+
+  utter_greeting:
+    - text: "Hello! How can I assist you today?"
+
+  utter_salary_query:
+    - text: "Salary details are processed through the payroll department."
+
+  utter_attendance_query:
+    - text: "Attendance information can be viewed from the employee portal."
+
+  utter_goodbye:
+    - text: "Thank you for contacting us. Have a great day!"
+
+  utter_thank_you:
+    - text: "You're welcome! How else may I assist you?"
+
+  
+  # Leave Workflow
+  
+
+  utter_ask_leave_type:
+    - text: "What type of leave would you like to apply for?"
+
+  utter_ask_leave_days:
+    - text: "How many days do you need?"
+
+  utter_ask_leave_date:
+    - text: "What is the start date of your leave?"
+
+  utter_leave_success:
+    - text: "Your leave request has been recorded successfully."
+
+  
+  # Document Workflow
+  
+
+  utter_ask_document_type:
+    - text: "Which document would you like to request?"
+
+  utter_ask_employee_id:
+    - text: "Please provide your employee ID."
+
+  utter_document_success:
+    - text: "Your document request has been submitted successfully."
+
+  
+  # Recruitment Workflow
+  
+
+  utter_ask_job_position:
+    - text: "Which position are you interested in?"
+
+  utter_ask_email:
+    - text: "Please provide your email address."
+
+  utter_recruitment_success:
+    - text: "Your recruitment inquiry has been recorded successfully."
+
+  
+  # Benefits Workflow
+  
+
+  utter_ask_benefit_type:
+    - text: "Which benefit would you like information about?"
+
+  utter_benefit_information:
+    - text: "Employees are eligible for benefits according to company HR policies. Please contact HR for detailed information."
+
+  
+  # Live Agent Workflow
+  
+
+  utter_ask_escalation_reason:
+    - text: "Please describe your issue so that I can forward it to a human agent."
+
+  utter_escalation_success:
+    - text: "Your request has been forwarded to a live HR representative."
+
+  
+  # Legacy Responses
+  
+
+  utter_leave_request:
+    - text: "Please submit your leave request through the HR portal."
+
+  utter_recruitment_query:
+    - text: "Current recruitment opportunities can be viewed on the company careers page."
+
+  utter_benefits_query:
+    - text: "Employee benefits include insurance, leave benefits, and performance incentives."
+
+  utter_document_request:
+    - text: "Please submit your document request through the HR services portal."

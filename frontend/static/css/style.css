@@ -1,0 +1,544 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top left, #1b1035 0%, #0d0a1f 45%, #070613 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #e6e4f0;
+    padding-bottom: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ============================= */
+/* NAVBAR                         */
+/* ============================= */
+.navbar-custom {
+    background: rgba(15, 12, 30, 0.85);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(140, 110, 255, 0.2);
+    padding: 14px 0;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    font-size: 1.05rem;
+}
+
+.navbar-custom .nav-link {
+    color: rgba(230, 228, 240, 0.75) !important;
+    font-weight: 500;
+    padding: 8px 16px !important;
+    border-radius: 8px;
+    margin: 0 2px;
+    transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #fff !important;
+    background: rgba(140, 110, 255, 0.12);
+}
+
+.navbar-custom .nav-link.active {
+    color: #fff !important;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(37, 99, 235, 0.35));
+    box-shadow: inset 0 0 0 1px rgba(140, 110, 255, 0.35);
+}
+
+.navbar-toggler {
+    border-color: rgba(140, 110, 255, 0.35);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* ============================= */
+/* PAGE HEADER                    */
+/* ============================= */
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.9rem;
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+}
+
+.page-header p {
+    color: rgba(230, 228, 240, 0.55);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.page-header .accent-bar {
+    width: 52px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    margin-bottom: 14px;
+}
+
+/* ============================= */
+/* GLASS CARD (generic)           */
+/* ============================= */
+.glass-card {
+    background: rgba(24, 20, 45, 0.85);
+    border: 1px solid rgba(140, 110, 255, 0.2);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ============================= */
+/* STAT CARDS (admin dashboard)   */
+/* ============================= */
+.stat-card {
+    background: rgba(24, 20, 45, 0.85);
+    border: 1px solid rgba(140, 110, 255, 0.2);
+    border-radius: 16px;
+    padding: 26px 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(140, 110, 255, 0.5);
+    box-shadow: 0 20px 50px rgba(124, 58, 237, 0.25);
+}
+
+.stat-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px auto;
+    font-size: 1.3rem;
+}
+
+.stat-icon.icon-violet { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+.stat-icon.icon-blue   { background: linear-gradient(135deg, #2563eb, #60a5fa); }
+.stat-icon.icon-teal   { background: linear-gradient(135deg, #0891b2, #22d3ee); }
+.stat-icon.icon-pink   { background: linear-gradient(135deg, #db2777, #f472b6); }
+
+.stat-card h5 {
+    color: rgba(230, 228, 240, 0.6);
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 8px;
+}
+
+.stat-card h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.1rem;
+    margin: 0;
+}
+
+/* ============================= */
+/* ACTION BUTTONS (dashboard nav) */
+/* ============================= */
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #fff !important;
+    border: 1px solid transparent;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.action-btn-violet { background: linear-gradient(135deg, #7c3aed, #4f46e5); }
+.action-btn-blue   { background: linear-gradient(135deg, #2563eb, #3b82f6); }
+.action-btn-teal   { background: linear-gradient(135deg, #0891b2, #06b6d4); }
+.action-btn-pink   { background: linear-gradient(135deg, #db2777, #ec4899); }
+
+/* ============================= */
+/* TABLES (admin sub-pages)       */
+/* ============================= */
+.table-wrapper {
+    background: rgba(24, 20, 45, 0.85);
+    border: 1px solid rgba(140, 110, 255, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.table-custom {
+    margin: 0;
+    color: #e6e4f0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-custom thead th {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(37, 99, 235, 0.35));
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px 18px;
+    border: none;
+}
+
+.table-custom tbody td {
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(140, 110, 255, 0.1);
+    border-top: none;
+    font-size: 0.92rem;
+    color: rgba(230, 228, 240, 0.9);
+    vertical-align: middle;
+}
+
+.table-custom tbody tr {
+    transition: background 0.15s ease;
+}
+
+.table-custom tbody tr:hover {
+    background: rgba(140, 110, 255, 0.08);
+}
+
+.table-custom tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.badge-id {
+    display: inline-block;
+    background: rgba(140, 110, 255, 0.15);
+    color: #a78bfa;
+    border: 1px solid rgba(140, 110, 255, 0.3);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.badge-sender-user {
+    display: inline-block;
+    background: rgba(124, 58, 237, 0.2);
+    color: #c4b5fd;
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.badge-sender-bot {
+    display: inline-block;
+    background: rgba(37, 99, 235, 0.2);
+    color: #93c5fd;
+    border: 1px solid rgba(37, 99, 235, 0.4);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px 20px;
+    color: rgba(230, 228, 240, 0.45);
+}
+
+.empty-state .empty-icon {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    opacity: 0.6;
+}
+
+/* ============================= */
+/* ANALYTICS PAGE                 */
+/* ============================= */
+.analytics-card {
+    background: rgba(24, 20, 45, 0.85);
+    border: 1px solid rgba(140, 110, 255, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    height: 100%;
+}
+
+.analytics-card h5 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trend-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(140, 110, 255, 0.1);
+}
+
+.trend-item:last-child {
+    border-bottom: none;
+}
+
+.trend-item .trend-label {
+    color: rgba(230, 228, 240, 0.85);
+    font-size: 0.9rem;
+}
+
+.trend-item .trend-count {
+    color: #a78bfa;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.progress-track {
+    height: 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    margin-top: 6px;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+}
+
+/* ============================= */
+/* CHAT PAGE (existing)           */
+/* ============================= */
+.chat-page-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0 30px 0;
+}
+
+.chat-wrapper {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.chat-card {
+    background: rgba(24, 20, 45, 0.85);
+    border: 1px solid rgba(140, 110, 255, 0.25);
+    border-radius: 18px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #2563eb 100%);
+    border: none;
+    padding: 18px 22px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.header-subtitle {
+    margin: 4px 0 0 20px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.82rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #22e07a;
+    box-shadow: 0 0 8px #22e07a, 0 0 2px #22e07a;
+    flex-shrink: 0;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+.chat-body {
+    background: transparent;
+    padding: 0;
+}
+
+#chat-box {
+    height: 440px;
+    overflow-y: auto;
+    padding: 20px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+#chat-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+#chat-box::-webkit-scrollbar-thumb {
+    background: rgba(140, 110, 255, 0.35);
+    border-radius: 10px;
+}
+#chat-box::-webkit-scrollbar-thumb:hover {
+    background: rgba(140, 110, 255, 0.55);
+}
+
+.user-message,
+.bot-message {
+    max-width: 75%;
+    margin: 6px 0;
+    padding: 10px 15px;
+    border-radius: 16px;
+    line-height: 1.4;
+    font-size: 0.95rem;
+    word-wrap: break-word;
+    animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-message {
+    align-self: flex-end;
+    text-align: right;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+}
+
+.user-message b {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+.bot-message {
+    align-self: flex-start;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e6e4f0;
+    border-bottom-left-radius: 4px;
+}
+
+.bot-message b {
+    color: #a78bfa;
+    font-weight: 600;
+}
+
+.chat-footer {
+    background: rgba(15, 12, 30, 0.9);
+    border-top: 1px solid rgba(140, 110, 255, 0.15);
+    padding: 16px 18px;
+}
+
+.chat-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(140, 110, 255, 0.25);
+    color: #f0eefc;
+    padding: 10px 16px;
+    border-radius: 10px 0 0 10px !important;
+}
+
+.chat-input::placeholder {
+    color: rgba(230, 228, 240, 0.4);
+}
+
+.chat-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+    color: #fff;
+}
+
+.send-btn {
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 0 10px 10px 0 !important;
+    transition: opacity 0.2s, transform 0.15s;
+}
+
+.send-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+.send-btn:active {
+    transform: translateY(0);
+}
+
+/* ============================= */
+/* RESPONSIVE                     */
+/* ============================= */
+@media (max-width: 768px) {
+    .stat-card h2 { font-size: 1.7rem; }
+    .page-header h1 { font-size: 1.5rem; }
+    .table-custom tbody td, .table-custom thead th { padding: 10px 12px; font-size: 0.82rem; }
+}

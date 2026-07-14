@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+- rule: greeting
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+
+- rule: salary query
+  steps:
+  - intent: salary_query
+  - action: utter_salary_query
+
+- rule: attendance query
+  steps:
+  - intent: attendance_query
+  - action: utter_attendance_query
+
+- rule: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: thank you
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
